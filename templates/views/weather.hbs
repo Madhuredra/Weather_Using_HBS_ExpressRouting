@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerLinks}}
+    <title>Weather</title>
+    <style>
+        .main_container{
+            height: 80vh;
+        }
+        .fa-cloud{
+                transition: all linear;
+                animation: rot1 5s linear infinite;
+        }
+        @keyframes rot1 {
+            0% {
+                transform: translateX(-40%);
+            }
+            50% {
+                transform: translateX(40%);
+            }
+            0%{
+                transform: translateX(0%);
+            }
+        }
+    </style>
+</head>
+<body>
+    {{>navbar}}
+    <div class="main_container">
+    <div class="main_content">
+        <form action="" class="temp_form">
+            <input type="text" name="" id="cityName" placeholder="Enter Your Location">
+            <input type="submit" value="Search" id="submitBtn">
+        </form>
+    </div>
+    <div class="tempInformation">
+        <div class="top_layer">
+            <p id="day">Tuesday</p>
+            <p id="today_date">13 Oct</p>
+        </div>
+        <div class="main_layer">
+            <p id="city_name">Get Output Here </p>
+            <p id="country_name"></p>
+            <div class="middle_layer data_hide">
+                <p><span id="temp">0</span><sup>o</sup>C</p>
+                <p id="temp_status"><i class="fa fa-cloud" aria-hidden="true"></i></p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    {{>footer}}
+    {{>script}}
+    <script src="../../../js/main.js"></script>
+</body>
+</html>
